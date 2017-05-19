@@ -1,0 +1,13 @@
+<md-list>
+
+	<md-subheader class="md-no-sticky">
+    All users
+  </md-subheader>
+
+	<md-list-item ng-repeat="user in users">
+		<md-button ng-href="#!/users/{{user['_id']}}">
+			{{user.first_name+" "+user.last_name}}
+		</md-button>
+	</md-list-item>
+
+</md-list>

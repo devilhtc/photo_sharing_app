@@ -1,0 +1,36 @@
+<div class="userphotos">
+
+
+
+  <md-list>
+
+    <md-list-item ng-repeat="photo in photos">
+      <md-card>
+
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{photo.date_time}}</span>
+          </md-card-title-text>
+        </md-card-title>
+
+        <md-card-content layout="column" layout-align="space-between">
+          <img ng-src="images/{{photo.file_name}}" class="md-card-image" alt="Washed Out">
+          <div class="comment_section">
+            <md-list>
+              <md-list-item> <h3>Comments</h3> </md-list-item>
+              <md-list-item ng-repeat="comment in photo.comments">
+
+                <div class="md-list-item-text">
+                  <h4><span class="commenter-name">{{comment.user.first_name+" "+comment.user.last_name}}</span> &nbsp {{comment.comment}}</h4>
+                  <p class="comment-date">{{comment.date_time}}</p>
+                </div>
+
+              </md-list-item>
+            </md-list>
+          </div>
+        </md-card-content>
+      </md-card>
+    </md-list-item>
+  </md-list>
+
+</div>

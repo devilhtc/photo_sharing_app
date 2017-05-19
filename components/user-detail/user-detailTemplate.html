@@ -1,0 +1,28 @@
+<div>
+  <md-card>
+    <div class ="userdetail">
+
+      <md-list>
+
+        <md-list-item>
+          Name: {{user.first_name+" "+user.last_name}}
+        </md-list-item>
+        <md-list-item>
+          Occupation: {{user.occupation}}
+        </md-list-item>
+        <md-list-item>
+          Location: {{user.location}}
+        </md-list-item>
+        <md-list-item>
+          Description: {{user.description}}
+        </md-list-item>
+
+      </md-list>
+      <div class="photos-button">
+        <md-button ng-href="#!/photos/{{user['_id']}}" class="md-raised">Photos</md-button>
+      </div>
+
+    </div>
+  </md-card>
+
+</div>
